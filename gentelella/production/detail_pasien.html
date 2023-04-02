@@ -418,14 +418,14 @@
                     </div>
                   </div>
                   <div class="row pl-3 m-3">
-                      <div class="col-lg-6">
-                        <div style="display: flex; justify-content: flex-start"><h3><i class="fa fa-stethoscope"></i> Vital Sign</h3></div>
+                    <div class="col-lg-6">
+                      <div style="display: flex; justify-content: flex-start"><h3><i class="fa fa-stethoscope"></i> Vital Sign</h3></div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div style="display: flex; justify-content: flex-end">
+                        <button type="submit" class="btn btn-info" style="border-radius: 7px;"><i class="fa fa-plus"></i> Simpan</button>
                       </div>
-                      <div class="col-lg-6">
-                        <div style="display: flex; justify-content: flex-end">
-                          <button type="submit" class="btn btn-info" style="border-radius: 7px;"><i class="fa fa-plus"></i> Simpan</button>
-                        </div>
-                      </div>
+                    </div>
                   </div>
                   <div class="row pl-3 m-3">
                     <div class="col-lg-6">
@@ -552,8 +552,104 @@
                 </div>
 
                 <div class="x_content">
+                  <div class="row" style="display:contents;">
+                    <div class="form-group tight">
+                      <div class="col-lg-12">
+                        <h5 class="alert" style="padding-top:9px; background-color: #2E4F4F; color: white;">Pasien: 00015721 / RINI ARYANI NY / 42 Tahun 1 Bulan 7 hari (24/02/1981)</h5>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row pl-3 m-3">
+                    <div class="col-lg-12">
+                      <div style="display: flex; justify-content: flex-start"><h3><i class="fa fa-bug"></i> Diagnosa</h3></div>
+                    </div>
+                  </div>
                   
-                    
+                  <div class="row pl-3 m-3">
+                    <div class="col-lg-6">
+                      <div class="form-group row mt-2">
+                        <label class="col-lg-3 form-label text-right"><strong>ICD X:</strong></label>
+                        <div class="col-lg-8">
+                          <input type="text" name="icd_x" class="form-control" id="icd_x">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-lg-3 form-label text-right"><strong>Kasus:</strong></label>
+                        <div class="col-lg-8">
+                          <select class="form-control" name="kasus" class="form-control" id="kasus">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-lg-3 form-label"></label>
+                        <div class="col-lg-8">
+                           <button type="button" title="Tambah Diagnosa" class="btn btn-primary" onclick="add_diagnosa()"><span class="fa fa-plus"></span> Tambah</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group row mt-2">
+                        <label class="col-lg-3 form-label text-right"><strong>Deskripsi ICD X:</strong></label>
+                        <div class="col-lg-8">
+                            <textarea type="text" name="deskripsi_diagnosa" class="form-control" rows="3" id="deskripsi_diagnosa" placeholder="Deskripsi ICD X"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="row pl-3 m-3">
+                    <table width="100%" class="table table-stripped table-hover" style="margin-bottom:0px;" cellpadding="0" cellspacing="0">
+                      <thead>
+                        <tr>
+                          <th width="5%">No.</th>
+                          <th width="20%" class="left">Nama Dokter</th>
+                          <th width="25%" class="left">ICD X</th>
+                          <th width="30%" class="left">Deskripsi</th>
+                          <th width="10%" align="center">Jenis Kasus</th>
+                          <th width="5%" align="center">Primer</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                    </table>
+                    <div style="max-height:200px;overflow-y:auto;">
+                      <table width="100%" class="table table-stripped table-hover" id="table-diag" cellpadding="0" cellspacing="0">
+                        <tbody>       
+                          <tr>
+                            <td width="5%" class=" ">1</td>
+                            <td width="15%" class=" ">dr. Ismi Ratnasari, Sp.A </td>
+                            <td width="15%" class=" ">Acute laryngopharyngitis | J06.0</td>
+                            <td width="43%" class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis repellat quod perferendis dolore iusto libero esse, quibusdam incidunt sed voluptatibus enim, eos aut harum tenetur modi aliquid amet. Iure, autem.</td>
+                            <td width="7%" class=" ">Lama</td>
+                            <td width="10%" class=" "><input class="form-control" type="checkbox" id=""/></td>
+                            <td align="center">
+                                <button title="Detail" type="button" class="btn btn-danger btn-sm" onclick=""><i class="fa fa-trash"></i></button>
+                            </td>
+                          </tr>         
+                          <tr>
+                            <td class=" ">1</td>
+                            <td class=" ">dr. Ismi Ratnasari, Sp.A </td>
+                            <td class=" ">Acute laryngopharyngitis | J06.0</td>
+                            <td class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis repellat quod perferendis dolore iusto libero esse, quibusdam incidunt sed voluptatibus enim, eos aut harum tenetur modi aliquid amet. Iure, autem.</td>
+                            <td class=" ">Lama</td>
+                            <td class=" "><input class="form-control" type="checkbox" id=""/></td>
+                            <td align="center">
+                                <button title="Detail" type="button" class="btn btn-danger btn-sm" onclick=""><i class="fa fa-trash"></i></button>
+                            </td>
+                          </tr>                            
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  
                 </div>
               </div>
               <!-- end of x_panel for DIagnosa PASIEN -->
