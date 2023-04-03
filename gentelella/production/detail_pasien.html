@@ -852,6 +852,9 @@
                         </tbody>
                       </table>
                     </div>
+                    <div class="col-lg-11 d-flex justify-content-end">
+                      <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Open Modal</button>
+                    </div>
                    </div>
                   </div>
                   <!-- END OF ORDER LAB -->
@@ -907,3 +910,59 @@
     <script src="../build/js/custom.min.js"></script>
   </body>
 </html>
+
+
+<!-- MODAL -->
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Item Pemeriksaan Laboratorium</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-toolbar">
+            <div class="toolbar-left">
+                <button type="button" class="btn btn-primary btn-sm" onclick=""><i class="fa fa-list"></i> Check All</button>
+                <button type="button" class="btn btn-primary btn-sm" onclick=""><i class="fa fa-list-alt"></i> Uncheck All</button>
+            </div>
+        </div>
+        <p>Check &checkmark; untuk memilih item pemeriksaan laboratorium yang akan diorder</p>
+        <table class="table table-stripped table-hover" id="table_item_lab">
+            <thead>
+                <tr>
+                  <th align="center" width="5%">No.</th>
+                  <th width="85%" class="">Item</th>
+                  <th align="center" width="10%"></th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr style="height: 26px;">
+                <td align="center">1</td>
+                <td class="">Hemoglobin</td>
+                <td class=""><input type="checkbox" class="" style="width: 12px;"></td>
+              </tr>
+              <tr>
+                <td align="center">2</td>
+                <td class="">Lekosit</td>
+                <td class=""><input type="checkbox" class="" style="width: 12px;"></td>
+              </tr>
+              <tr>
+                <td align="center">3</td>
+                <td class="">Trombosit</td>
+                <td class=""><input type="checkbox" class="" style="width: 12px;"></td>
+              </tr>
+              <tr>
+                <td align="center">4</td>
+                <td class="">Hematokrit</td>
+                <td class=""><input type="checkbox" class="" style="width: 12px;"></td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick=""><i class="fa fa-save"></i> Simpan</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
