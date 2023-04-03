@@ -591,7 +591,7 @@
                       <div class="form-group row">
                         <label class="col-lg-3 form-label"></label>
                         <div class="col-lg-8">
-                           <button type="button" title="Tambah Diagnosa" class="btn btn-primary" onclick="add_diagnosa()"><span class="fa fa-plus"></span> Tambah</button>
+                           <button type="button" title="Tambah Diagnosa" class="btn btn-info" style="border-radius: 7px;"  onclick="add_diagnosa()"><span class="fa fa-plus"></span> Tambah</button>
                         </div>
                       </div>
                     </div>
@@ -682,10 +682,179 @@
                   <div class="row pl-3 m-3">
                     <div class="col-lg-12">
                       <table class="table table-striped table-hover">
-
+                        <tbody>
+                          <tr>
+                            <td width="20%"><strong>Waktu Order</strong></td>
+                            <td width="1%">:</td>
+                            <td width="89%"><span id="waktu_order_minta_lab"></span></td>
+                          </tr>    
+                          <tr>
+                            <td><strong>Waktu Hasil</strong></td>
+                            <td>:</td>
+                            <td><span id="waktu_hasil_minta_lab"></span></td>
+                          </tr>
+                          <tr>
+                            <td><strong>Dokter Pemesan</strong></td>
+                            <td>:</td>
+                            <td><span id="dokter_minta_lab"></span></td>
+                          </tr>  
+                          <tr>
+                            <td><strong>Analis Laboratorium</strong></td>
+                            <td>:</td>
+                            <td><span id="analis_minta_lab"></span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td width="21%"></td>
+                            <td width="89%"><button type="button" title="Tambah Diagnosa" class="btn btn-round btn-secondary btn-sm" onclick="add_diagnosa()"><span class="fa fa-print"></span> Cetak Hasil</button></td>
+                          </tr>  
+                        </tbody>
                       </table>
                     </div>
                   </div>
+
+                  <div class="row pl-3 m-3">
+                    <div class="col-lg-12">
+                      <table class="table table-hover" >
+                        <thead class="table">
+                          <tr>
+                            <th width="75%" class="text-left" style="font-size: 16px;">Layanan</th>
+                            <th width="25%" class="text-left" style="font-size: 16px;">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-left" colspan="2" style="background-color :#4fd8e7;">Laboratorium PK</td>
+                          </tr>
+                          <tr>
+                            <td class="text-left" style="padding-left: 8%;" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas aperiam accusantium, doloribus adipisci sint pariatur. Ratione atque impedit eius libero placeat. Eveniet id rerum tempore voluptates? Similique corporis sed error!</td>
+                            <td>Order</td>
+                          </tr>
+
+                          <tr>
+                            <td class="text-left" colspan="2" style="background-color :#4fd8e7;">Laboratorium PA</td>
+                          </tr>
+                          <tr>
+                            <td class="text-left" style="padding-left: 8%;" >Albumin, Kimia Darah, Per Pemeriksaan, , kelas qweeqweasdasdasd</td>
+                            <td>Order</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <br />
+                  <br />
+                  <!-- ORDER LAB -->
+                  <div class="row pl-3 m-3">
+                    <div class="col-lg-12">
+                      <div style="display: flex; justify-content: flex-start"><h3><i class="fa fa-medkit"></i> Order Pemeriksaan Lab</h3></div>
+                    </div>
+                  </div>
+
+                  <div class="row pl-3 m-3">
+                    <div class="col-lg-6">
+                      <div class="form-group row mt-2">
+                        <label class="col-lg-3 form-label text-right"><strong>Laboratorium Klinis:</strong></label>
+                        <div class="col-lg-8">
+                          <select class="form-control" name="kasus" class="form-control" id="lab_klinis_order_lab">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-lg-3 form-label text-right"><strong>Pemeriksaan:</strong></label>
+                        <div class="col-lg-8">
+                          <select class="form-control" name="kasus" class="form-control" id="pemeriksaan_order_lab">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group row mt-2">
+                        <label class="col-lg-3 form-label text-right"><strong>Diagnosa Klinis:</strong></label>
+                        <div class="col-lg-8">
+                          <input type="text" name="icd_x" class="form-control" id="diagnosa_klinis_order_lab">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-lg-3 form-label text-right"><strong>Cito:</strong></label>
+                        <div class="col-lg-8">
+                          <select class="form-control" name="kasus" class="form-control" id="cito_order_lab">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-11 d-flex justify-content-end">
+                        <button type="button" title="Tambah Diagnosa" class="btn btn-info" style="border-radius: 7px;" onclick="add_diagnosa()"><span class="fa fa-plus"></span> Tambah</button>
+                    </div>
+                  </div>
+
+                  <br/>
+                  <div class="row pl-3 m-3">
+                   <div class="col-lg-12">
+                    <table width="100%" class="table table-stripped table-hover" style="margin-bottom:0px;" cellpadding="0" cellspacing="0" >
+                      <thead>
+                        <tr>
+                          <th width="5%">No.</th>
+                          <th width="25%" class="text-left" >Pemeriksaan</th>
+                          <th width="45%" class="text-left">Item</th>
+                          <th width="10%" class="text-left">Tarif</th>
+                          <th width="10%" align="center">Cito</th>
+                          <th width="5%"></th>
+                        </tr>
+                      </thead>
+                    </table>
+                   </div>
+                   <div class="col-lg-12">
+                    <div style="max-height:100%;overflow-y:auto;">
+                      <table width="100%" class="table table-stripped table-hover" id="table-diag" cellpadding="0" cellspacing="0" >
+                        <tbody>       
+                          <tr>
+                            <td width="5%" class=" ">1</td>
+                            <td width="25%" class=" ">ALBUMIN, Laboratorium PK, UMUM, Rawat Jalan, kelas hijklmn </td>
+                            <td width="45%" class=" ">Albumin</td>
+                            <td width="10%" class=" ">62.000</td>
+                            <td width="10%" class=" ">Tidak</td>
+                            <td align="center" width="5%">
+                                <button title="Detail" type="button" class="btn btn-danger btn-sm" onclick=""><i class="fa fa-trash"></i></button>
+                            </td>
+                          </tr>      
+                          <tr>
+                            <td width="5%" class=" ">1</td>
+                            <td width="25%" class=" ">ALBUMIN, Laboratorium PK, UMUM, Rawat Jalan, kelas hijklmn </td>
+                            <td width="45%" class=" ">Albumin</td>
+                            <td width="10%" class=" ">62.000</td>
+                            <td width="10%" class=" ">Tidak</td>
+                            <td align="center" width="5%">
+                                <button title="Detail" type="button" class="btn btn-danger btn-sm" onclick=""><i class="fa fa-trash"></i></button>
+                            </td>
+                          </tr>           
+                        </tbody>
+                      </table>
+                    </div>
+                   </div>
+                  </div>
+                  <!-- END OF ORDER LAB -->
                 </div>
               </div>
                <!-- end of x_panel for Lab PASIEN -->
